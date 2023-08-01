@@ -1,7 +1,10 @@
-import { Home as HomeIcon, Search, Library, ChevronLeft, ChevronRight, Play, Shuffle, SkipBack, SkipForward, Repeat, Mic2, LayoutList, Laptop2, Volume, Maximize2 } from "lucide-react";
-import Image from 'next/image'
-import { Sidebar } from "../components/sidebar";
-import { Footer } from "../components/footer";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Sidebar }  from "../components/Sidebar";
+import { Footer } from "../components/Footer";
+import Title from "../components/Title";
+import Subtitle from "../components/Subtitle";
+import Playlist from "../components/Playlist";
+import Mix from "../components/Mix";
 
 export default function Home() {
   return (
@@ -10,7 +13,7 @@ export default function Home() {
         <Sidebar />
         <main className="flex-1 p-6">
           <div className="flex items-center gap-4">
-            <button className="rounded-full bg-black/40 p-1">
+            <button className="rounded-full bg-black/40 p-1 hover:bg-zinc">
               <ChevronLeft/>
             </button>
             <button className="rounded-full bg-black/40 p-1">
@@ -18,87 +21,23 @@ export default function Home() {
             </button>
           </div>
 
-          <h1 className="font-semibold text-3xl mt-10">Good Afternoon</h1>
+          <Title titulo="Let's listen to the playlists"/>
 
           <div className="grid grid-cols-3 gap-4 mt-4">
-            <a href="#" className="bg-white/5 group rounded overflow-hidden flex items-center gap-4 hover:bg-1hite/20">
-              <Image src="/album.jpg" width={104} height={104} alt="Capa do Álbum That's The Spirit da banda Bring Me The Horizon"/>
-              <strong>That's The Spirit</strong>
-              
-              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible">
-                <Play/>
-              </button>
-            </a>
-            <a href="#" className="bg-white/5 rounded overflow-hidden flex items-center gap-4 hover:bg-white/10 group">
-              <Image src="/album.jpg" width={104} height={104} alt="Capa do Álbum That's The Spirit da banda Bring Me The Horizon"/>
-              <strong>That's The Spirit</strong>
-
-              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible">
-                <Play/>
-              </button>
-            </a>
-            <a href="#" className="bg-white/5 rounded overflow-hidden flex items-center gap-4 hover:bg-white/10 group">
-              <Image src="/album.jpg" width={104} height={104} alt="Capa do Álbum That's The Spirit da banda Bring Me The Horizon"/>
-              <strong>That's The Spirit</strong>
-
-              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible">
-                <Play/>
-              </button>
-            </a>
-            <a href="#" className="bg-white/5 rounded overflow-hidden flex items-center gap-4 hover:bg-white/10 group">
-              <Image src="/album.jpg" width={104} height={104} alt="Capa do Álbum That's The Spirit da banda Bring Me The Horizon"/>
-              <strong>That's The Spirit</strong>
-
-              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible">
-                <Play/>
-              </button>
-            </a>
-            <a href="#" className="bg-white/5 rounded overflow-hidden flex items-center gap-4 hover:bg-white/10 group">
-              <Image src="/album.jpg" width={104} height={104} alt="Capa do Álbum That's The Spirit da banda Bring Me The Horizon"/>
-              <strong>That's The Spirit</strong>
-
-              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible">
-                <Play/>
-              </button>
-            </a>
-            <a href="#" className="bg-white/5 rounded overflow-hidden flex items-center gap-4 hover:bg-white/10 group">
-              <Image src="/album.jpg" width={104} height={104} alt="Capa do Álbum That's The Spirit da banda Bring Me The Horizon"/>
-              <strong>That's The Spirit</strong>
-
-              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible">
-                <Play/>
-              </button>
-            </a>
+            <Playlist srcImagem="/thats-the-spirit.jpg" playlistName="That's the spirit"/>
+            <Playlist srcImagem="/wasting-light.jpg" playlistName="Wasting Light"/>
+            <Playlist srcImagem="/minutes-to-midnight.jpg" playlistName="Minutes To Midnight"/>
+            <Playlist srcImagem="/living-things.jpg" playlistName="Living Things"/>
+            <Playlist srcImagem="/night-visions.jpeg" playlistName="Night Visions"/>
+            <Playlist srcImagem="/evolve.jpg" playlistName="Evolve"/>
           </div>
 
-          <h1 className="font-semibold text-2xl mt-10">Made for João Victor Cavalcante Lima</h1>
+          <Subtitle subtitulo="Made for " userName="João Victor Cavalcante Lima"/>
 
           <div className="grid grid-cols-8 gap-4 mt-4">
-            <a href="#" className="bg-white/5 p-3 rounded-lg flex flex-col gap-2 hover:bg-white/10">
-              <Image src="/album.jpg" className="w-full" width={120} height={120} alt="Capa do Álbum That's The Spirit da banda Bring Me The Horizon"/>
-              <strong className="font-semibold">Daily Mix 1</strong>
-              <span className="text-sm text-zinc-400">Wallows, COIN, girl in red and more</span>
-            </a>
-            <a href="#" className="bg-white/5 p-3 rounded-lg flex flex-col gap-2 hover:bg-white/10">
-              <Image src="/album.jpg" className="w-full" width={120} height={120} alt="Capa do Álbum That's The Spirit da banda Bring Me The Horizon"/>
-              <strong className="font-semibold">Daily Mix 1</strong>
-              <span className="text-sm text-zinc-400">Wallows, COIN, girl in red and more</span>
-            </a>
-            <a href="#" className="bg-white/5 p-3 rounded-lg flex flex-col gap-2 hover:bg-white/10">
-              <Image src="/album.jpg" className="w-full" width={120} height={120} alt="Capa do Álbum That's The Spirit da banda Bring Me The Horizon"/>
-              <strong className="font-semibold">Daily Mix 1</strong>
-              <span className="text-sm text-zinc-400">Wallows, COIN, girl in red and more</span>
-            </a>
-            <a href="#" className="bg-white/5 p-3 rounded-lg flex flex-col gap-2 hover:bg-white/10">
-              <Image src="/album.jpg" className="w-full" width={120} height={120} alt="Capa do Álbum That's The Spirit da banda Bring Me The Horizon"/>
-              <strong className="font-semibold">Daily Mix 1</strong>
-              <span className="text-sm text-zinc-400">Wallows, COIN, girl in red and more</span>
-            </a>
-            <a href="#" className="bg-white/5 p-3 rounded-lg flex flex-col gap-2 hover:bg-white/10">
-              <Image src="/album.jpg" className="w-full" width={120} height={120} alt="Capa do Álbum That's The Spirit da banda Bring Me The Horizon"/>
-              <strong className="font-semibold">Daily Mix 1</strong>
-              <span className="text-sm text-zinc-400">Wallows, COIN, girl in red and more</span>
-            </a>
+            <Mix srcImagem1="/classic2.jpg" srcImagem2="/classic5.jpg" srcImagem3="/classic3.jpg" srcImagem4="/classic4.jpg" mixName="Daily Mix 1" spanMix="The best classical songs of the 1970s"/>
+            <Mix srcImagem1="/rock1.jpg" srcImagem2="/rock2.jpg" srcImagem3="/rock3.jpg" srcImagem4="/rock4.jpg" mixName="Daily Mix 2" spanMix="Rock HITS of the week"/>
+            <Mix srcImagem1="/indie1.jpg" srcImagem2="/indie2.jpg" srcImagem3="/indie3.jpg" srcImagem4="/indie4.jpg" mixName="Daily Mix 3" spanMix="Indie chills for you"/>
           </div>
 
         </main>

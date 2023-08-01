@@ -1,4 +1,4 @@
-import { Home as HomeIcon, Search, Library, ChevronLeft, ChevronRight, Play, Shuffle, SkipBack, SkipForward, Repeat, Mic2, LayoutList, Laptop2, Volume, Maximize2 } from "lucide-react";
+import { Play, Shuffle, SkipBack, SkipForward, Repeat, Mic2, LayoutList, Laptop2, Volume2, Maximize2 } from "lucide-react";
 import Image from 'next/image'
 
 export function Footer() {
@@ -35,7 +35,7 @@ export function Footer() {
           <LayoutList size={20}/>
           <Laptop2 size={20}/>
           <div className="flex items-center gap-2">
-            <Volume size={20}/>
+            <Volume2 size={20}/>
             <div className="h-1 rounded-full w-24 bg-zinc-600">
               <div className="bg-zinc-200 h-1 rounded-full w-20"></div>
             </div>

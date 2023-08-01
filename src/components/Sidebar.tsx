@@ -1,4 +1,4 @@
-import { Home as HomeIcon, Search, Library, ChevronLeft, ChevronRight, Play, Shuffle, SkipBack, SkipForward, Repeat, Mic2, LayoutList, Laptop2, Volume, Maximize2 } from "lucide-react";
+import { Home as HomeIcon, Search, Library } from "lucide-react";
 
 export function Sidebar() {
     return (
@@ -11,15 +11,15 @@ export function Sidebar() {
         </div>
 
         <nav className="space-y-5 mt-10">
-          <a href="" className="flex items-center gap-3 text-sm font-semibold text-zinc-200">
+          <a href="" className="flex items-center gap-3 text-sm font-semibold text-zinc-200 hover:text-zinc-100">
             <HomeIcon/>
             Home
           </a>
-          <a href="" className="flex items-center gap-3 text-sm font-semibold text-zinc-200">
+          <a href="" className="flex items-center gap-3 text-sm font-semibold text-zinc-200 hover:text-zinc-100">
             <Search/>
             Search
           </a>
-          <a href="" className="flex items-center gap-3 text-sm font-semibold text-zinc-200">
+          <a href="" className="flex items-center gap-3 text-sm font-semibold text-zinc-200 hover:text-zinc-100">
             <Library/>
             Your Library
           </a>
